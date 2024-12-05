@@ -4,14 +4,19 @@ const bodyParser = require('body-parser');
 const userModel = require('./models/user');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // Vercel will provide the port via process.env.PORT
 
+// Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 
+// Route for homepage
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
+
+// Route for registration page
 app.get('/register.html', (req, res) => res.sendFile(path.join(__dirname, '../public/register.html')));
 
+// Registration handler
 app.post('/register', async (req, res) => {
   const { phone, password } = req.body;
   try {
@@ -23,6 +28,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
+// Login handler
 app.post('/login', async (req, res) => {
   const { phone, password } = req.body;
   try {
@@ -38,6 +44,8 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+// Start the server with dynamic port for Vercel
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
 });
+
