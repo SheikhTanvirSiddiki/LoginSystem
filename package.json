@@ -4,21 +4,12 @@
   "description": "A login system project",
   "main": "server/app.js",
   "scripts": {
-    "start": "node server/app.js",          // Start the app using the server/app.js entry point
-    "heroku-postbuild": "echo 'No build step required for this app.'" // Optional step if you need to handle build issues
+    "start": "node server/app.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "bcryptjs": "^2.4.3",
     "sqlite3": "^5.0.2",
     "dotenv": "^10.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"  // Optional: For local development, use nodemon to auto-restart your server
-  },
-  "engines": {
-    "node": "16.x"  // You can specify the Node.js version you are using (Recommended for Render)
-  },
-  "author": "Sheikh Tanvir Siddiki",
-  "license": "MIT"
+  }
 }
