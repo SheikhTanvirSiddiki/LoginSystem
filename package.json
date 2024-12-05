@@ -1,0 +1,16 @@
+{
+    "name": "LoginSystem",
+    "version": "1.0.0",
+    "description": "A login system project",
+    "main": "server/app.js",
+    "scripts": {
+      "start": "node server/app.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "bcryptjs": "^2.4.3",
+      "sqlite3": "^5.0.2",
+      "dotenv": "^10.0.0"
+    }
+  }
+  

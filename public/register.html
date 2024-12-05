@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form action="/register" method="POST">
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/index.html">Login here</a></p>
+  </div>
+  
+  <script src="/script.js"></script>
+</body>
+</html>
