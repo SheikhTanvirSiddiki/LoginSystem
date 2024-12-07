@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="form-container">
     <h2>Register</h2>
-    <form action="/register" method="POST">
+    <form action="/register" method="POST" autocomplete="off">
+      <!-- Hidden inputs to prevent autofill -->
+      <input type="text" style="display:none">
+      <input type="password" style="display:none">
+
       <label for="phone">Phone Number:</label>
-      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="new-phone" required>
       
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="new-password" required>
 
       <button type="submit">Register</button>
     </form>
-    <p>Already have an account? <a href="/index.html">Login here</a></p>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
   </div>
   
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
